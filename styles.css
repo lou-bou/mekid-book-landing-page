@@ -51,6 +51,20 @@ body {
 	box-shadow: var(--shadow-xl);
 }
 
+.hero__price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.hero__price-old {
+    text-decoration: line-through;
+    margin-right: 10px;
+    color: #888;
+}
+.hero__price-new {
+    font-weight: bold;
+    color: var(--color-success);
+}
+
 /* mockup styles removed */
 
 .hero__content { max-width: 640px; }
@@ -175,5 +189,6 @@ body {
     .author__image { order: 2; }
     .summary__grid { grid-template-columns: 1.1fr 0.9fr; grid-template-areas: "content media"; align-items: start; gap: 28px; }
 }
+
 
 
