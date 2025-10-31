@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مقام اللا شيء - صفحة هبوط</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero" role="banner">
+        <div class="container hero__container">
+            <div class="hero__image">
+                <img src="./IMG-20251031-WA0000 - Copy.jpg" alt="غلاف كتاب مقام اللا شيء" width="640" height="900">
+            </div>
+            <div class="hero__content">
+                <span class="hero__badge">إصدار جديد</span>
+                <h1 class="hero__title">مقام اللا شيء</h1>
+                <p class="hero__tagline">خريطة عملية تقودك من الحلم الى الانجاز<br>اسلوب قصصي  نفسي يعيد برمجتك على النجاح</p>
+                <a class="btn btn--primary" href="#order" aria-label="اطلب الآن">اطلب الآن</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="summary" id="summary" aria-labelledby="summary-title">
+        <div class="container summary__grid">
+            <div class="summary__media">
+                <img src="./IMG-20251031-WA0001.jpg" alt="صورة حقيقية لكتاب مقام اللا شيء" width="900" height="900">
+            </div>
+            <div class="summary__content">
+                <h2 class="summary__title" id="summary-title">نبذة عن الكتاب</h2>
+                <p>هل تجرأ أن تخلع كل ما علق بك وتكتشف ذاتك العميقة؟</p>
+                <p>“مقام اللاشيء” ليس كتاباً تقرأه ثم تضعه جانباً... إنه المفتاح السري الذي سيقودك إلى مكان لم تطأه من قبل، حيث تتهاوى القيود، وتنكشف الأوهام، وتدرك أنك تملك القدرة على إعادة رسم حياتك من جديد.</p>
+                <p>كل صفحة من هذا الكتاب هي ومضة توقف حواسك، كل سطر يختبر قناعاتك، وكأن القصة كُتبت لك وحدك. تأخذ بيدك خطوة بخطوة، لتخرجك من الضياع إلى وضوح الهدف، ومن ثقل الماضي إلى حرية الروح.</p>
+                <p>إن كنت تبحث عن أكثر من قراءة... عن تحويل يغيّر نظرتك إلى المال، الحب، العلاقات، وحتى ذاتك... فهذا الكتاب هو دعوتك للارتقاء إلى مستوى جديد من الوعي والوفرة. هنا، ستكتشف أن امتلاك كل شيء يبدأ حين تعود إلى مقام اللاشيء.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="author" id="author" aria-labelledby="author-title">
+        <div class="container author__container">
+            <div class="author__image">
+                <img src="./IMG-20251031-WA0004.jpg" alt="صورة المؤلفة" width="480" height="480">
+            </div>
+            <div class="author__content">
+                <h2 class="author__title" id="author-title">عن المؤلفة</h2>
+                <h3 class="author__name">نوال مكيد</h3>
+                <p class="author__bio">رائدة اعمال جزائرية, مدربة ومعالجة اسرية, باحثة في علوم النفس والروح</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="order" aria-labelledby="cta-title">
+        <div class="container cta__container">
+            <div class="cta__content">
+                <h2 class="cta__title" id="cta-title">اطلب نسختك الآن</h2>
+                <p class="cta__desc">أدخل بياناتك وسنتواصل معك لتأكيد الطلب.</p>
+                <form class="order-form" id="order-form" novalidate data-endpoint="https://script.google.com/macros/s/AKfycbzXvL50yRkOGWwM-Tkwcch383R9L-impFSrDSzgbJtIiy4FUVSd4dtIYn5Gop_3Js59/exec">
+                    <div class="form__row">
+                        <label class="form__label" for="fullName">الاسم واللقب</label>
+                        <input class="form__input" type="text" id="fullName" name="fullName" placeholder="الاسم واللقب" required>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="phone">رقم الهاتف</label>
+                        <input class="form__input" type="tel" id="phone" name="phone" placeholder="رقم الهاتف" inputmode="numeric" required>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="address">العنوان الكامل</label>
+                        <textarea class="form__input form__textarea" id="address" name="address" rows="3" placeholder="العنوان الكامل" required></textarea>
+                    </div>
+                    <div class="form__actions">
+                        <button class="btn btn--cta" type="submit" aria-label="إرسال الطلب">إرسال الطلب</button>
+                    </div>
+                    <p class="form__note" id="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    
+    <!-- In-page modal dialog -->
+    <div class="modal" id="status-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__dialog" role="document">
+            <div class="modal__body" id="modal-message">يتم الإرسال...</div>
+            <div class="modal__actions">
+                <button class="btn modal__close" id="modal-close" type="button">حسناً</button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    /* Fallback critical styles in case styles.css fails to load */
+    body { margin: 0; font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Naskh Arabic", sans-serif; background:#ffffff; color:#1b1121; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; box-sizing: border-box; }
+    .hero { background: linear-gradient(160deg, #69208c 0%, #c348df 60%); color: #ffffff; }
+    .hero__container { display: grid; gap: 24px; align-items: center; padding-top: 28px; padding-bottom: 32px; }
+    .hero__image img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+    .hero__content { max-width: 640px; }
+    .hero__badge { display: inline-block; background: #e4b651; color: #1b1121; padding: 8px 14px; border-radius: 999px; font-weight: 700; margin-bottom: 10px; }
+    .hero__title { margin: 10px 0 10px; font-size: 2.25rem; line-height: 1.15; }
+    .hero__tagline { margin: 0 0 20px; opacity: 0.98; font-size: 1.125rem; line-height: 1.7; }
+    .btn { display: inline-block; text-decoration: none; font-weight: 700; border-radius: 10px; padding: 14px 22px; }
+    .btn--primary { background: #509e6b; color: #ffffff; }
+    @media (min-width: 992px) {
+        .hero__container { grid-template-columns: 1fr 1fr; gap: 48px; padding: 56px 16px; }
+        /* Place text on the left (first column in RTL grid) and image on the right */
+        .hero__content { order: 1; }
+        .hero__image { order: 2; }
+        .hero__title { font-size: 3.25rem; }
+        .hero__tagline { font-size: 1.25rem; }
+    }
+    /* Summary fallback */
+    .summary__title { margin: 0 0 14px; font-size: 1.5rem; color: #69208c; font-weight: 700; }
+    .summary__content { font-size: 1.0625rem; line-height: 1.9; }
+    .summary__content p { margin: 0 0 14px; }
+    /* Author fallback */
+    .author__container { display: grid; gap: 20px; align-items: center; }
+    .author__image img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .author__title { margin: 0 0 6px; color: #69208c; font-size: 1.5rem; }
+    .author__name { margin: 0 0 10px; font-size: 1.125rem; color: #e4b651; }
+    .author__bio { margin: 0; line-height: 1.9; }
+    /* CTA fallback */
+    .cta { background: linear-gradient(160deg, #69208c 0%, #c348df 60%); color: #ffffff; }
+    .cta__container { text-align: center; padding-top: 28px; padding-bottom: 32px; }
+    .cta__title { margin: 0 0 8px; font-size: 1.75rem; }
+    .cta__desc { margin: 0 0 16px; opacity: 0.95; }
+    .order-form { max-width: 640px; margin: 0 auto; text-align: right; }
+    .form__row { margin-bottom: 12px; }
+    .form__label { display: block; margin-bottom: 6px; font-weight: 700; }
+    .form__input { width: 100%; padding: 12px 14px; border-radius: 10px; border: none; outline: none; }
+    .form__textarea { resize: vertical; }
+    .form__actions { margin-top: 12px; }
+    .btn--cta { background: #e4b651; color: #1b1121; padding: 14px 28px; border-radius: 12px; display: inline-block; font-weight: 800; text-decoration: none; border: 0; cursor: pointer; }
+    .form__note { margin-top: 10px; font-weight: 700; }
+    @media (min-width: 992px) {
+        .author__container { grid-template-columns: 1fr 1.2fr; gap: 40px; }
+        .author__content { order: 1; }
+        .author__image { order: 2; }
+    }
+    /* Modal fallback */
+    .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000; }
+    .modal[aria-hidden="false"] { display: flex; }
+    .modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
+    .modal__dialog { position: relative; background: #ffffff; color: #1b1121; border-radius: 12px; width: min(92vw, 460px); padding: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.3); text-align: center; }
+    .modal__body { margin-bottom: 12px; font-weight: 700; }
+    .modal__actions { display: flex; gap: 8px; justify-content: center; }
+    .modal__close { background: #509e6b; color: #ffffff; }
+</style>
+</html>
+
