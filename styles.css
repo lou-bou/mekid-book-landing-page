@@ -62,7 +62,7 @@ body {
 }
 .hero__price-new {
     font-weight: bold;
-    color: var(--color-success);
+    color: #40E581;
 }
 
 /* mockup styles removed */
@@ -189,6 +189,7 @@ body {
     .author__image { order: 2; }
     .summary__grid { grid-template-columns: 1.1fr 0.9fr; grid-template-areas: "content media"; align-items: start; gap: 28px; }
 }
+
 
 
 
